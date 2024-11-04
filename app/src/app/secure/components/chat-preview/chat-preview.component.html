@@ -1,0 +1,27 @@
+<article class="w-full">
+  <a class="flex items-center gap-4 p-2">
+    <img [ngSrc]="avatarUrl" alt="Chat avatar" width="50" height="50" />
+
+    <div class="flex w-full flex-col gap-1">
+      <div class="flex items-center justify-between gap-2">
+        <h3 class="font-bold">{{ chatName }}</h3>
+
+        <span
+          class="text-sm"
+          [ngStyle]="{
+            color: unreadMessages > 0 ? '#2563EB' : '#6B7280',
+          }"
+          >{{ lastMessageTime }}</span
+        >
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <p class="text-gray-500">{{ lastMessage }}</p>
+
+        @if (unreadMessages > 0) {
+          <span class="rounded-full bg-blue-600 px-2 text-[12px] text-white">{{ unreadMessages }}</span>
+        }
+      </div>
+    </div>
+  </a>
+</article>

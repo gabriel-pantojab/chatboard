@@ -1,1 +1,25 @@
-<p>chats-page works!</p>
+<article class="flex h-full flex-col p-2 pt-0">
+  <form class="w-full bg-white pb-2">
+    <label class="w-full" for="search">
+      <input
+        class="w-full rounded-2xl border border-gray-300 bg-gray-200 px-4 py-2 outline-none focus:bg-transparent"
+        type="text"
+        id="search"
+        placeholder="Search" />
+    </label>
+  </form>
+
+  <section class="flex h-full flex-col gap-2 overflow-y-auto">
+    <app-chat-preview
+      [chatName]="'John Doe'"
+      [lastMessageTime]="'10:00'"
+      [lastMessage]="'Hello, how are you?'"
+      [unreadMessages]="3"></app-chat-preview>
+
+    <app-chat-preview
+      [chatName]="'John Doe'"
+      [lastMessageTime]="'10:00'"
+      [lastMessage]="'Hello, how are you?'"
+      [unreadMessages]="0"></app-chat-preview>
+  </section>
+</article>
