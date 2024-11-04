@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PublicViewComponent } from './public/views/public-view/public-view.component';
+import { PublicViewComponent } from './public/pages/public-page/public-view.component';
 
 export const routes: Routes = [
   {
