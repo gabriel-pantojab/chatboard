@@ -1,0 +1,14 @@
+<header
+  class="flex gap-4 bg-blue-600 p-2 text-white"
+  [ngClass]="{ 'justify-between': showTitle, 'justify-end': !showTitle }"
+>
+  @if (showTitle) {
+    <h2>CharBoard</h2>
+  }
+
+  <nav class="flex gap-2">
+    <a routerLink="/auth/sign-in">Sign in</a>
+    |
+    <a routerLink="/register">Register</a>
+  </nav>
+</header>
