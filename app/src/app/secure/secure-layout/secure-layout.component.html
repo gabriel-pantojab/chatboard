@@ -1,0 +1,11 @@
+<article class="flex h-full flex-col overflow-hidden">
+  <app-header></app-header>
+
+  <input #burguer class="hidden" type="checkbox" name="burguer" id="burguer" />
+
+  <label for="burguer" class="bg-sidebar absolute inset-0 z-[1]"></label>
+
+  <app-sidebar (toggleSidebar)="toggleSidebar()"></app-sidebar>
+
+  <router-outlet></router-outlet>
+</article>
