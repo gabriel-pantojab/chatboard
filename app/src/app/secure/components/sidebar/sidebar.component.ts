@@ -2,6 +2,9 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
+import { sidebar } from '@core/mocks/sidebar.mock';
+import { NavItem } from '@core/interfaces/nav-item.interface';
+
 @Component({
   selector: 'app-sidebar',
   standalone: true,
@@ -16,13 +19,10 @@ export class SidebarComponent {
   @Output()
   public toggleSidebar: EventEmitter<void>;
 
-  public links: { label: string; path: string }[];
+  public links: NavItem[];
 
   constructor() {
-    this.links = [
-      { label: 'Chats', path: '/secure/chats' },
-      { label: 'Status', path: '/secure/status' },
-    ];
+    this.links = sidebar;
 
     this.toggleSidebar = new EventEmitter<void>();
   }
