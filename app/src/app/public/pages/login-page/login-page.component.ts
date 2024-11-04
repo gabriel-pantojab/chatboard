@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { LoginFormComponent } from '../../components/login-form/login-form.component';
+import { LoginFormComponent } from '@public/components/login-form/login-form.component';
 
 @Component({
   selector: 'app-login-page',

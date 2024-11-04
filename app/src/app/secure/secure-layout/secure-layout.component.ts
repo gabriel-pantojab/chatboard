@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../components/header/header.component';
-import { SidebarComponent } from '../components/sidebar/sidebar.component';
+
+import { HeaderComponent } from '@secure/components/header/header.component';
+import { SidebarComponent } from '@secure/components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-secure-layout',

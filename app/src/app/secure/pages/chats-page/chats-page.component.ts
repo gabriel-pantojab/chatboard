@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { ChatPreviewComponent } from '../../components/chat-preview/chat-preview.component';
-import { ChatPreview } from '../../../core/interfaces/chat-preview.interface';
-import { chats } from '../../../core/mocks/chats.mock';
+
+import { ChatPreview } from '@core/interfaces/chat-preview.interface';
+import { chats } from '@core/mocks/chats.mock';
+
+import { ChatPreviewComponent } from '@secure/components/chat-preview/chat-preview.component';
 
 @Component({
   selector: 'app-chats-page',
