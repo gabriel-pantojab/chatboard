@@ -10,16 +10,12 @@
   </form>
 
   <section class="flex h-full flex-col gap-2 overflow-y-auto">
-    <app-chat-preview
-      [chatName]="'John Doe'"
-      [lastMessageTime]="'10:00'"
-      [lastMessage]="'Hello, how are you?'"
-      [unreadMessages]="3"></app-chat-preview>
-
-    <app-chat-preview
-      [chatName]="'John Doe'"
-      [lastMessageTime]="'10:00'"
-      [lastMessage]="'Hello, how are you?'"
-      [unreadMessages]="0"></app-chat-preview>
+    @for (chat of chats; track chat.id) {
+      <app-chat-preview
+        [chatName]="chat.name"
+        [lastMessageTime]="chat.lastMessageTime"
+        [lastMessage]="chat.lastMessage"
+        [unreadMessages]="chat.unreadMessages"></app-chat-preview>
+    }
   </section>
 </article>
