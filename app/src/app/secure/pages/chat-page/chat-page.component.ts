@@ -1,19 +1,16 @@
-import { NgClass, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
+
+import { ChatMessageComponent } from '@secure/components/chat-message/chat-message.component';
 
 @Component({
   selector: 'app-chat-page',
   standalone: true,
-  imports: [NgOptimizedImage, NgClass],
+  imports: [NgOptimizedImage, ChatMessageComponent],
   templateUrl: './chat-page.component.html',
   styles: `
     :host {
       height: calc(100% - 48px);
-    }
-
-    .me {
-      align-self: flex-end;
-      background-color: rgba(0, 0, 255, 0.1);
     }
   `,
 })
