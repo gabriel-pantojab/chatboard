@@ -14,4 +14,8 @@ export const secureRoutes: Routes = [
     path: 'status',
     loadComponent: () => import('./pages/status-page/status-page.component').then(c => c.StatusPageComponent),
   },
+  {
+    path: 'chats/:id',
+    loadComponent: () => import('./pages/chat-page/chat-page.component').then(c => c.ChatPageComponent),
+  },
 ];
