@@ -1,12 +1,13 @@
 import { NgOptimizedImage } from '@angular/common';
 import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { ChatMessageComponent } from '@secure/components/chat-message/chat-message.component';
 
 @Component({
   selector: 'app-chat-page',
   standalone: true,
-  imports: [NgOptimizedImage, ChatMessageComponent],
+  imports: [NgOptimizedImage, ChatMessageComponent, RouterLink],
   templateUrl: './chat-page.component.html',
   styles: `
     :host {
