@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 import { ChatMessage } from '@core/models/chat-message';
 import { messages } from '@core/mocks/messages.mock';
 
-import { ChatMessageComponent } from '@secure/components/chat-message/chat-message.component';
+import { ChatMessageComponent } from '@/app/secure/chats/components/chat-message/chat-message.component';
 
 @Component({
   selector: 'app-chat-page',
