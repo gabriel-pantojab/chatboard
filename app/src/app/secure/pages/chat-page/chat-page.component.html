@@ -53,7 +53,7 @@
 
   <section #messagesContainer class="flex flex-col gap-2 overflow-y-auto bg-gray-100 p-2 px-5">
     @for (message of messages; track $index) {
-      <app-chat-message [message]="message.message" [isMine]="message.isMine" [time]="message.time"></app-chat-message>
+      <app-chat-message [hasBeenRead]="message.hasBeenRead" [message]="message.message" [isMine]="message.isMine" [time]="message.time"></app-chat-message>
     }
   </section>
 
