@@ -1,16 +1,15 @@
-import { NgOptimizedImage } from '@angular/common';
 import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { ChatMessage } from '@core/models/chat-message';
 import { messages } from '@core/mocks/messages.mock';
 
-import { ChatMessageComponent } from '@/app/secure/chats/components/chat-message/chat-message.component';
+import { ChatMessageComponent } from '@secure/chats/components/chat-message/chat-message.component';
+import { ChatHeaderComponent } from '@secure/chats/components/chat-header/chat-header.component';
 
 @Component({
   selector: 'app-chat-page',
   standalone: true,
-  imports: [NgOptimizedImage, ChatMessageComponent, RouterLink],
+  imports: [ChatMessageComponent, ChatHeaderComponent],
   templateUrl: './chat-page.component.html',
   styles: `
     :host {
